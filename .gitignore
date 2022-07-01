@@ -1,5 +1,12 @@
+# python files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # virtual environment
 venv
 
 # ide
 .idea
+
+.env
