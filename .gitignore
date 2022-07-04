@@ -1,7 +1,5 @@
 # python files
 __pycache__/
-*.py[cod]
-*$py.class
 
 # virtual environment
 venv
@@ -10,3 +8,4 @@ venv
 .idea
 
 .env
+*.pyc
