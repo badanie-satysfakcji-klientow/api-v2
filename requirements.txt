@@ -2,3 +2,4 @@ django>=4.0.5
 djangorestframework
 django-cors-headers
 django-extensions
+python-dotenv~=0.20.0
