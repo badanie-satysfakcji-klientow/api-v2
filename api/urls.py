@@ -24,5 +24,5 @@ urlpatterns = [
     path('api/v2/', include('api.apps.profiles.urls')),
 
     path('api/v2/', include('api.apps.survey.urls')),
-    path('api/v2/', include('api.apps.item.urls')),
+    path('api/v2/', include('api.apps.answer.urls')),
 ]
