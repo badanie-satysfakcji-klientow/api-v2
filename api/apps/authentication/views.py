@@ -38,3 +38,14 @@ class AuthenticationViewSet(ModelViewSet):
         user.set_password(request.data['password'])
         user.save()
         return Response(status=status.HTTP_200_OK)
+
+    @action(methods=['patch'], detail=True)
+    def authorize_creator(self, request):
+        if not request.user.is_authenticated:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
+
+        # TODO: some more logic here
+        user = request.user
+        user.type = User.UserType.CREATOR
+        user.save()
+        return Response(status=status.HTTP_200_OK)

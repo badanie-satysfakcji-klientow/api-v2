@@ -38,3 +38,10 @@ class AuthenticationAPITest(APITestCase):
         self.client.login(email='test123@mail.com', password='test123')
         response = self.client.patch(url, {'password': 'new_password'})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_can_authorize_creator(self):
+        url = reverse('authorize-creator')
+        self.client.login(email='test123@mail.com', password='test123')
+        response = self.client.patch(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(User.objects.first().type, User.UserType.CREATOR)
