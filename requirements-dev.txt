@@ -2,6 +2,7 @@ django>=4.0.5
 djangorestframework
 django-cors-headers
 django-extensions
-django-cors-headers
+django-coverage
 psycopg2-binary
-python-dotenv~=0.20.0
+python-dotenv
+lorem-text
