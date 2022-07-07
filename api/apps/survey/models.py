@@ -11,7 +11,7 @@ class Survey(models.Model):
     creator = models.ForeignKey('authentication.User', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)  # new field since api-v2
-    starts_at = models.DateTimeField(blank=True, null=True)
+    starts_at = models.DateTimeField(blank=True, null=True)  # TODO: default: now
     expires_at = models.DateTimeField(blank=True, null=True)
     paused = models.BooleanField(default=False)
     anonymous = models.BooleanField(default=False)
