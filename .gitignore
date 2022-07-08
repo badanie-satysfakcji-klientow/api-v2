@@ -1,3 +1,6 @@
+# python files
+__pycache__/
+
 # virtual environment
 venv
 
@@ -5,3 +8,4 @@ venv
 .idea
 
 .env
+.pyc
